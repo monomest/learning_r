@@ -3,7 +3,7 @@
 .RData
 .Ruserdata
 .Rprofile
-Learn_RStudio.proj
+Learn_RStudio.Rproj
 renv
 renv.lock
 /data
