@@ -168,3 +168,24 @@ print(GenrePlot + labs(
   title = "Which music genres are popular by age",
   y = "Count", x = "Favourite music genre", fill = "Age"
 ))
+
+# --------------------------------------------
+#  Importing and exporting in R Data Formats
+# --------------------------------------------
+# Saving data into R data formats can reduce considerably the size of large files by compression.
+# Source: http://www.sthda.com/english/wiki/saving-data-into-r-data-format-rds-and-rdata
+#         https://bookdown.org/ndphillips/YaRrr/rdata-files.html
+
+# Save an object to a file
+saveRDS(dataset, file = "data/mxmh_survey_results.rds")
+# Restore the object as a dataframe
+dataset_rds <- readRDS(file = "data/mxmh_survey_results.rds")
+str(dataset_rds)
+
+# Saving on object in RData format
+save(dataset, file = "data/mxmh_survey_results.RData")
+# Save multiple objects
+data2 <- c(0,1,2,3)
+save(dataset, data2, file = "data/data.RData")
+# To load the data again
+load("data/data.RData")
